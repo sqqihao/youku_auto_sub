@@ -1,0 +1,97 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <link type="text/css" rel="stylesheet" href="libs/css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="libs/main.css"/>
+    <link type="text/css" rel="stylesheet" href="libs/css/artDialog.css"/>
+    <script src="libs/js/jquery.js"></script>
+    <script src="libs/js/bootstrap.min.js"></script>
+    <script src="libs/js/artDialog.js"></script>
+    <script src="libs/js/iframeTools.source.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <ul class="nav nav-tabs" role="tablist" id="myTab">
+            <li role="presentation" class="active">
+                <a href="#setting" aria-controls="setting" role="tab" data-toggle="tab">设置</a>
+            </li>
+            <li role="presentation">
+                <a href="#follow" aria-controls="follow" role="tab" data-toggle="tab">订阅</a>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade in active" id="setting">
+                <div class="container main-container">
+                    <div class="row">
+                        <input type="text" id="confirmCode">
+                        <br>
+
+                        <h4>登录用户列表</h4>
+                        <p>每一组用户密码通过","分开(要用英文字符);用户名和密码通过"---"分开,比如:</p>
+                        <pre>
+                            xxx@163.com---password1,
+                            xxx@163.com---pass2
+                        </pre>
+                        <textarea id="users">
+                            gepwq58473li@163.com---0mQKEmQKmz
+                        </textarea>
+
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="follow">
+                <div class="follow-container">
+                    <img id="captcha" src=""/>
+
+                    <h4>订阅用户列表;</h4>
+                    <div class="followslist">
+                        <p>每一个订阅的用户通过"---"分开，比如：</p>
+                        <pre>
+                            UMTE3MTYyNjY0---
+                            UMzkxNTY2MTI4
+                        </pre>
+                        <textarea id="followlist" contenteditable="true">
+                            UMTE3MTYyNjY0---
+                            UMzkxNTY2MTI4
+                        </textarea>
+                    </div>
+                    <br>
+
+                    <div>
+                        目前有:<span id="followResult">0</span>位订阅成功
+                    </div>
+
+                    <input class="btn btn-default" type="button" id="submit" value="登陆订阅">
+
+                    <br>
+                    <input class="btn btn-default" type="button" id="logoff" value="退出">
+
+                    <div>
+                        <button id="reload" type="button" class="btn btn-link">刷新</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container dairy log">
+        日记:
+</div>
+<div id="msg" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <p>
+                内容
+            </p>
+        </div>
+    </div>
+</div>
+<script src="libs/main.js">
+</script>
+</body>
+</html>
